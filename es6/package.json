@@ -1,0 +1,40 @@
+{
+  "name": "@danielbackes/rocketseat-starter",
+  "version": "0.0.1",
+  "description": "Project to practice Rocketseat Starter Course's lessons. Using the Feynman Technique to improve my learning about the course content and improve my English learning.",
+  "keywords": [
+    "NodeJS",
+    "Docker Swarm",
+    "Rocketseat Starter Course"
+  ],
+  "author": "Daniel Backes",
+  "email": "danielbackes@protonmail.com",
+  "license": "MIT",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "webpack --mode=development -w",
+    "index": "babel ./assets/index.js -o ./public/index.js -w",
+    "conceitos-exercicio-1": "babel ./assets/conceitos/exercicio-1.js -o ./public/conceitos/exercicio-1.js -w",
+    "conceitos-exercicio-2": "babel ./assets/conceitos/exercicio-2.js -o ./public/conceitos/exercicio-2.js -w",
+    "conceitos-exercicio-3": "babel ./assets/conceitos/exercicio-3.js -o ./public/conceitos/exercicio-3.js -w",
+    "conceitos-exercicio-4": "babel ./assets/conceitos/exercicio-4.js -o ./public/conceitos/exercicio-4.js -w",
+    "conceitos-exercicio-5": "babel ./assets/conceitos/exercicio-5.js -o ./public/conceitos/exercicio-5.js -w",
+    "conceitos-exercicio-6": "babel ./assets/conceitos/exercicio-6.js -o ./public/conceitos/exercicio-6.js -w",
+    "conceitos-exercicio-7": "babel ./assets/conceitos/exercicio-7.js -o ./public/conceitos/exercicio-7.js -w"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "compression": "^1.7.3",
+    "eslint": "^6.1.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "morgan": "^1.9.1",
+    "webpack": "^4.39.0",
+    "webpack-cli": "^3.3.6",
+    "yarn": "^1.17.3"
+  }
+}
