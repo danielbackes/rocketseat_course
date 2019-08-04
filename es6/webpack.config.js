@@ -13,7 +13,8 @@ module.exports = {
     "async-await/exercicio-1": "./src/async-await/exercicio-1.js",
     "async-await/exercicio-2": "./src/async-await/exercicio-2.js",
     "async-await/exercicio-3": "./src/async-await/exercicio-3.js",
-    "async-await/exercicio-4": "./src/async-await/exercicio-4.js"
+    "async-await/exercicio-4": "./src/async-await/exercicio-4.js",
+    "aplicacao/index": "./src/aplicacao/index.js"
   },
   output: {
     path: __dirname + "/public",
