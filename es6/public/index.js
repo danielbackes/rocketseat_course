@@ -81,32 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/funcoes.js":
-/*!***************************!*\
-  !*** ./assets/funcoes.js ***!
-  \***************************/
-/*! exports provided: soma */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"soma\", function() { return soma; });\nfunction soma(a, b) {\n  return a + b;\n}\n\n//# sourceURL=webpack:///./assets/funcoes.js?");
-
-/***/ }),
-
-/***/ "./assets/index.js":
-/*!*************************!*\
-  !*** ./assets/index.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _funcoes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./funcoes.js */ \"./assets/funcoes.js\");\nfunction _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\n\nvar usuario = {\n  nome: \"Daniel Backes\",\n  email: \"danielbackes@protonmail.com\"\n};\n\nvar nome = usuario.nome,\n    resto = _objectWithoutProperties(usuario, [\"nome\"]);\n\nconsole.log(nome);\nconsole.log(resto);\nconsole.log(Object(_funcoes_js__WEBPACK_IMPORTED_MODULE_0__[\"soma\"])(1, 3));\n\n//# sourceURL=webpack:///./assets/index.js?");
+eval("function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }\n\nfunction _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }\n\nvar usuario = {\n  nome: \"Daniel Backes\",\n  email: \"danielbackes@protonmail.com\"\n};\n\nvar nome = usuario.nome,\n    resto = _objectWithoutProperties(usuario, [\"nome\"]);\n\nconsole.log(nome);\nconsole.log(resto);\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
