@@ -1,17 +1,15 @@
-# Docker and NodeJS
-
-NodeJS 12.6 template project to run development environment on docker swarm cluster.
-
 ![Docker and NodeJS](readme/docker-nodejs.png)
 
 ## 1. Environment configuration
 
 ### 1.1. Docker images
+
 - node:12.6.0-alpine
 - portainer
 - traefik
-  
+
 ### 1.2. Webserver:
+
 - NodeJS: v12.6
 - Npm: v6.9.0
 - Yarn: v1.16.0
@@ -23,6 +21,7 @@ NodeJS 12.6 template project to run development environment on docker swarm clus
 First of all, you need discovery the IP address of your docker interface.
 
 Then execute the follow command with the IP address that you meet.
+
 ```sh
 sudo docker swarm init --advertise-addr <ip-address>
 ```
@@ -31,7 +30,8 @@ sudo docker swarm init --advertise-addr <ip-address>
 
 Deploy `nodejs` stack, that contain the follow services: node_alpine, portainer/agent and traefik.
 
-Execute the follow command:  
+Execute the follow command:
+
 ```sh
 sudo environment/docker-stack-deploy.sh
 ```
