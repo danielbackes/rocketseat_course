@@ -1,0 +1,22 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+}
+
+.box {
+  width: 300px;
+  height: 60px;
+  background: #f00;
+  margin: 5px;
+  /* to element fill all space */
+  /* flex-grow: 1; */
+
+  /* don't allow element resize */
+  flex-shrink: 0;
+}
