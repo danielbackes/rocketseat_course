@@ -1,3 +1,7 @@
+# Javascript project
+
+Project developed copying the instructor coding during the Rocketseat Starter Course.
+
 First of all, I am making this course just to review some basic concepts
 that I use every day in my currently job and to learn new things.
 
