@@ -5,5 +5,5 @@ Project to practice Rocketseat basics lessons. Using the Feynman Technique to im
 ## What I learned in this project?
 
 - [JavaScript](javascript/README.md)
-- [ECMAScript 6](ecma-script-6/README.md)
-- [ReactJS Basics](reactjs-basics/README.md)
+- [ECMAScript 6](ecma_script_6/README.md)
+- [ReactJS Basics](reactjs_basics/README.md)
