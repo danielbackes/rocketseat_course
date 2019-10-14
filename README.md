@@ -6,5 +6,6 @@ Project to practice Rocketseat basics lessons. Using the Feynman Technique to im
 
 - [JavaScript](javascript/README.md)
 - [ECMAScript 6](ecma_script_6/README.md)
-- [ReactJS Basics](reactjs_basics/README.md)
-- [ReactJS Git Repository](github_repository/README.md)
+- [React JS Basics](reactjs_basics/README.md)
+- [React JS Git Repository](github_repository/README.md)
+- [React Native Git Repository](github_repository_mobile/README.md)
