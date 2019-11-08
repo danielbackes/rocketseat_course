@@ -11,3 +11,4 @@ Project to practice Rocketseat basics lessons. Using the Feynman Technique to im
 - [React Native Git Repository](github_repository_mobile/README.md)
 - [React JS Rocketshoes](rocketshoes/README.md)
 - [React Hooks](react_hooks/README.md)
+- [React JS Rocketshoes Hooks](rocketshoes_hooks/README.md)
