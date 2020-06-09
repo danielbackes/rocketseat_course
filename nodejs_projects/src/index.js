@@ -2,37 +2,65 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (request, response) => {
   response.json({ message: 'Hello GoStack 🖐️' });
 });
 
-app.get('/projects', (request, response) => {
-  response.json([
-    'GoBarber',
-    'Tindev',
+app.get('/books', (request, response) => {
+  const { title, owner } = request.query;
+
+  console.log('Query params');
+  console.log(title);
+  console.log(owner);
+
+  return response.json([
+    'Man, Economy and State',
+    'The Law',
   ]);
 });
 
-app.post('/projects', (request, response) => {
+app.post('/books', (request, response) => {
+  const { title, owner } = request.body;
+
+  console.log('Request Body');
+  console.log(title);
+  console.log(owner);
+
   return response.json([
-    'GoBarber',
-    'Tindev',
-    'Projects',
+    'Man, Economy and State',
+    'The Law',
+    title,
   ]);
 });
 
-app.put('/projects/:id', (request, response) => {  
+app.put('/books/:id', (request, response) => {  
+  const { id } = request.params;
+
+  console.log('Route params');
+  console.log(id);
+
+  const { title, owner } = request.body;
+
+  console.log('Request Body');
+  console.log(title);
+  console.log(owner);
+
   return response.json([
-    'GoBarber Pro',
-    'Tindev',
-    'Projects',
+    'Man, Economy and State',
+    title,
   ]);
 });
 
-app.delete('/projects/:id', (request, response) => {
+app.delete('/books/:id', (request, response) => {
+  const { id } = request.params;
+
+  console.log('Route params');
+  console.log(id);
+
   return response.json([
-    'GoBarber Pro',
-    'Tindev',
+    'Man, Economy and State',
   ]);
 });
 
