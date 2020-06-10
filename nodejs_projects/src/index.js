@@ -1,67 +1,70 @@
 const express = require('express');
+const { uuid } = require('uuidv4');
 
 const app = express();
 
 app.use(express.json());
+
+const books = [];
 
 app.get('/', (request, response) => {
   response.json({ message: 'Hello GoStack 🖐️' });
 });
 
 app.get('/books', (request, response) => {
-  const { title, owner } = request.query;
+  const { title } = request.query;
 
-  console.log('Query params');
-  console.log(title);
-  console.log(owner);
+  const results = title 
+    ? books.filter(book => book.title.includes(title))
+    : books;
 
-  return response.json([
-    'Man, Economy and State',
-    'The Law',
-  ]);
+  return response.json(results);
 });
 
 app.post('/books', (request, response) => {
   const { title, owner } = request.body;
 
-  console.log('Request Body');
-  console.log(title);
-  console.log(owner);
+  const book = { id: uuid(), title, owner };
 
-  return response.json([
-    'Man, Economy and State',
-    'The Law',
-    title,
-  ]);
+  books.push(book);
+
+  return response.json(book);
 });
 
 app.put('/books/:id', (request, response) => {  
   const { id } = request.params;
+  
+  const bookIndex = books.findIndex(project => project.id === id);
 
-  console.log('Route params');
-  console.log(id);
+  if (bookIndex < 0) {
+    return response.status(400).json({ error: 'Book not found.'});
+  }
 
   const { title, owner } = request.body;
 
-  console.log('Request Body');
-  console.log(title);
-  console.log(owner);
-
-  return response.json([
-    'Man, Economy and State',
+  const book = {
+    id,
     title,
-  ]);
+    owner,
+  };
+
+  books[bookIndex] = book;
+
+  return response.json(book);
 });
 
 app.delete('/books/:id', (request, response) => {
   const { id } = request.params;
 
-  console.log('Route params');
-  console.log(id);
+  const bookIndex = books.findIndex(project => project.id === id);
 
-  return response.json([
-    'Man, Economy and State',
-  ]);
+  if (bookIndex < 0) {
+    return response.status(400).json({ error: 'Book not found.'});
+  }
+
+  books.splice(bookIndex, 1);
+
+  return response.status(204).send();
 });
 
 app.listen(3333, () => {
