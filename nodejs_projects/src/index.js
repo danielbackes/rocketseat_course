@@ -1,9 +1,15 @@
 const express = require('express');
 const { uuid } = require('uuidv4');
 
+const log = require('./middleware/log');
+const validateId = require('./middleware/validateId');
+
 const app = express();
 
 app.use(express.json());
+
+app.use(log);
+app.use('/books/:id', validateId);
 
 const books = [];
 
