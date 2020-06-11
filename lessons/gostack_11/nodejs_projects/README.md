@@ -1,4 +1,4 @@
-# NodeJS Books
+# NodeJS Projects
 
 Project developed copying the instructor coding during the Rocketseat Bootcamp Course.
 

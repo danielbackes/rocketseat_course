@@ -21,21 +21,21 @@ The technologies used are NodeJS, ReactJS and ReactNative.
 
 ### Starter Course
 > #### Lessons
-> - [JavaScript](lessons/javascript/)
-> - [ECMAScript 6](lessons/ecma_script_6/)
+> - [JavaScript](lessons/starter/javascript/)
+> - [ECMAScript 6](lessons/starter/ecma_script_6/)
 
 ### GoStack Course V10
 > #### Lessons
-> - [ReactJS Basics](lessons/reactjs_basics/)
-> - [ReactJS Git Repository](lessons/github_repository/)
-> - [React Native Git Repository](lessons/github_repository_mobile/)
-> - [ReactJS Rocketshoes](lessons/rocketshoes/)
-> - [React Hooks](lessons/react_hooks/)
-> - [ReactJS Rocketshoes Hooks](lessons/rocketshoes_hooks/)
+> - [ReactJS Basics](lessons/gostack_10/reactjs_basics/)
+> - [ReactJS Git Repository](lessons/gostack_10/github_repository/)
+> - [React Native Git Repository](lessons/gostack_10/github_repository_mobile/)
+> - [ReactJS Rocketshoes](lessons/gostack_10/rocketshoes/)
+> - [React Hooks](lessons/gostack_10/react_hooks/)
+> - [ReactJS Rocketshoes Hooks](lessons/gostack_10/rocketshoes_hooks/)
 
 ### GoStack Course V11
 > #### Lessons
-> - [NodeJS Books](lessons/nodejs_books/)
+> - [NodeJS Books](lessons/gostack_11/nodejs_books/)
 
 > #### Challenges
-> - [Portfolio Repositories](challenges/portfolio_repositories/)
+> - [Portfolio Repositories](challenges/gostack_11/portfolio_repositories/)
