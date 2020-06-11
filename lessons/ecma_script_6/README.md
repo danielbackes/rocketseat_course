@@ -1,4 +1,4 @@
-# ECMAScript 6 project
+# ECMAScript 6
 
 Project developed copying the instructor coding during the Rocketseat Starter Course.
 

@@ -1,4 +1,4 @@
-# Javascript project
+# Javascript
 
 Project developed copying the instructor coding during the Rocketseat Starter Course.
 
