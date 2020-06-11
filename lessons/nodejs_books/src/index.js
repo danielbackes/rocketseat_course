@@ -40,7 +40,7 @@ app.post('/books', (request, response) => {
 app.put('/books/:id', (request, response) => {  
   const { id } = request.params;
   
-  const bookIndex = books.findIndex(project => project.id === id);
+  const bookIndex = books.findIndex(book => book.id === id);
 
   if (bookIndex < 0) {
     return response.status(400).json({ error: 'Book not found.'});
@@ -62,7 +62,7 @@ app.put('/books/:id', (request, response) => {
 app.delete('/books/:id', (request, response) => {
   const { id } = request.params;
 
-  const bookIndex = books.findIndex(project => project.id === id);
+  const bookIndex = books.findIndex(book => book.id === id);
 
   if (bookIndex < 0) {
     return response.status(400).json({ error: 'Book not found.'});

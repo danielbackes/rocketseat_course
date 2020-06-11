@@ -1,12 +1,12 @@
-# React JS Rocketshoes project
+# React JS Git Repository
 
 Project developed copying the instructor coding during the Rocketseat Bootcamp Course.
 
 ## What I learned in this project?
 
-- Redux
-- Redux Saga
-- Reactotron with ReactJS and Redux
+- React Router
+- Styled Components
+- ComponentDidMount and componentDidUpdate
 
 ## See the screenshots
 

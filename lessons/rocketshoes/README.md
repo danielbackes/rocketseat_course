@@ -1,15 +1,12 @@
-# React Native Git Repository project
+# React JS Rocketshoes
 
 Project developed copying the instructor coding during the Rocketseat Bootcamp Course.
 
 ## What I learned in this project?
 
-- StackNavigator
-- Navigation's props
-- Function component
-- Class component
-- Basic Hooks like setState
-- Reactotron tool
+- Redux
+- Redux Saga
+- Reactotron with ReactJS and Redux
 
 ## See the screenshots
 

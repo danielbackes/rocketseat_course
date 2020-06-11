@@ -1,4 +1,4 @@
-# React JS Rocketshoes project
+# React JS Rocketshoes
 
 Project developed copying the instructor coding during the Rocketseat Bootcamp Course.
 

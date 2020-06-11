@@ -1,12 +1,15 @@
-# React JS Git Repository project
+# React Native Git Repository
 
 Project developed copying the instructor coding during the Rocketseat Bootcamp Course.
 
 ## What I learned in this project?
 
-- React Router
-- Styled Components
-- ComponentDidMount and componentDidUpdate
+- StackNavigator
+- Navigation's props
+- Function component
+- Class component
+- Basic Hooks like setState
+- Reactotron tool
 
 ## See the screenshots
 

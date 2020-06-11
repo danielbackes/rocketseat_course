@@ -1,4 +1,4 @@
-# ReactJS project
+# ReactJS Basics
 
 Project developed copying the instructor coding during the Rocketseat Bootcamp Course.
 
