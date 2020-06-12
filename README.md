@@ -35,7 +35,8 @@ The technologies used are NodeJS, ReactJS and ReactNative.
 
 ### GoStack Course V11
 > #### Lessons
-> - [NodeJS Books](lessons/gostack_11/nodejs_books/)
+> - [NodeJS Projects](lessons/gostack_11/nodejs_projects/)
+> - [ReactJS Projects](lessons/gostack_11/reactjs_projects/)
 
 > #### Challenges
 > - [Portfolio Repositories](challenges/gostack_11/portfolio_repositories/)
