@@ -1,11 +1,6 @@
 # Rocketseat Courses
 
 This project aim to group the code maked by the course instructor, that I copied to practice and memorize the concepts.
-Another aim of this project is group the challenge projects proposol by instructor and that I developed to put
-in pratice the concepts that I just learn.
-
-There are another projects that I developed durant the course, however, for being biggest projects I decided that is
-better create an isolated project for each one, that also are available on github.
 
 Using the Feynman Technique to improve my learning about the course content and improve my English learning.
 
@@ -20,23 +15,17 @@ The technologies used are NodeJS, ReactJS and ReactNative.
 ## What I learned or did in each project?
 
 ### Starter Course
-> #### Lessons
-> - [JavaScript](lessons/starter/javascript/)
-> - [ECMAScript 6](lessons/starter/ecma_script_6/)
+- [JavaScript](starter/javascript/)
+- [ECMAScript 6](starter/ecma_script_6/)
 
 ### GoStack Course V10
-> #### Lessons
-> - [ReactJS Basics](lessons/gostack_10/reactjs_basics/)
-> - [ReactJS Git Repository](lessons/gostack_10/github_repository/)
-> - [React Native Git Repository](lessons/gostack_10/github_repository_mobile/)
-> - [ReactJS Rocketshoes](lessons/gostack_10/rocketshoes/)
-> - [React Hooks](lessons/gostack_10/react_hooks/)
-> - [ReactJS Rocketshoes Hooks](lessons/gostack_10/rocketshoes_hooks/)
+ - [ReactJS Basics](gostack_10/reactjs_basics/)
+ - [ReactJS Git Repository](gostack_10/github_repository/)
+ - [React Native Git Repository](gostack_10/github_repository_mobile/)
+ - [ReactJS Rocketshoes](gostack_10/rocketshoes/)
+ - [React Hooks](gostack_10/react_hooks/)
+ - [ReactJS Rocketshoes Hooks](gostack_10/rocketshoes_hooks/)
 
 ### GoStack Course V11
-> #### Lessons
-> - [NodeJS Projects](lessons/gostack_11/nodejs_projects/)
-> - [ReactJS Projects](lessons/gostack_11/reactjs_projects/)
-
-> #### Challenges
-> - [Portfolio Repositories](challenges/gostack_11/portfolio_repositories/)
+ - [NodeJS Projects](gostack_11/nodejs_projects/)
+ - [ReactJS Projects](gostack_11/reactjs_projects/)
