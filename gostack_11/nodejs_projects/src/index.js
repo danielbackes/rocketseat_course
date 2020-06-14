@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const { uuid } = require('uuidv4');
 
 const log = require('./middleware/log');
@@ -6,6 +7,7 @@ const validateId = require('./middleware/validateId');
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.use(log);
