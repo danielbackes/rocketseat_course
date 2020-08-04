@@ -27,5 +27,8 @@ The technologies used are NodeJS, ReactJS and ReactNative.
  - [ReactJS Rocketshoes Hooks](gostack_10/rocketshoes_hooks/)
 
 ### GoStack Course V11
- - [NodeJS Projects](gostack_11/nodejs_projects/)
- - [ReactJS Projects](gostack_11/reactjs_projects/)
+ - [NodeJS Projects](gostack_11/projects/nodejs_projects/)
+ - [ReactJS Projects](gostack_11/projects/reactjs_projects/)
+ - [React Native Projects](gostack_11/projects/reactnative_projects/)
+ - [Typescript](gostack_11/typescript/)
+ - [Github Explorer](gostack_11/github_explorer/)
