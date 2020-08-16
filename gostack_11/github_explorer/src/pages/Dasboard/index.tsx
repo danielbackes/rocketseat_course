@@ -1,73 +1,107 @@
-import React from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
+import api from '../../services/api';
 import logoImg from '../../assets/logo.png';
 
-import { Title, LogoText, Form, Repositories } from './styles';
+import { Title, LogoText, Form, Repositories, Error } from './styles';
 
-const Dashboard: React.FC = () => (
-  <>
-    <img src={logoImg} alt="Github Explorer" width="40" />
-    <LogoText>
-      <span>github</span>
-      _explorer
-    </LogoText>
-    <Title>Explore repositories on Github.</Title>
+interface Repository {
+  full_name: string;
+  description: string;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
 
-    <Form>
-      <input placeholder="Type the repository name" />
-      <button type="submit">Search</button>
-    </Form>
+const Dashboard: React.FC = () => {
+  const [newRepo, setNewRepo] = useState('');
+  const [inputError, setInputError] = useState('');
 
-    <Repositories>
-      <a href="teste">
-        <img
-          src="https://avatars3.githubusercontent.com/u/1704461?s=460&v=4"
-          alt="Daniel Backes"
+  const [repositories, setRepositories] = useState<Repository[]>(() => {
+    const storageRepositories = localStorage.getItem(
+      '@GithubExplorer:repositories',
+    );
+
+    if (storageRepositories) {
+      return JSON.parse(storageRepositories);
+    }
+
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(
+      '@GithubExplorer:repositories',
+      JSON.stringify(repositories),
+    );
+  }, [repositories]);
+
+  async function handleAddRepository(
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> {
+    event.preventDefault();
+
+    if (!newRepo) {
+      setInputError('Type repository (author/name).');
+      return;
+    }
+
+    try {
+      const response = await api.get<Repository>(`repos/${newRepo}`);
+
+      const repository = response.data;
+
+      setRepositories([...repositories, repository]);
+      setNewRepo('');
+      setInputError('');
+    } catch (err) {
+      setInputError("Repository isn't found out.");
+    }
+  }
+
+  return (
+    <>
+      <img src={logoImg} alt="Github Explorer" width="40" />
+      <LogoText>
+        <span>github</span>
+        _explorer
+      </LogoText>
+      <Title>Explore repositories on Github.</Title>
+
+      <Form hasError={!!inputError} onSubmit={handleAddRepository}>
+        <input
+          value={newRepo}
+          onChange={e => setNewRepo(e.target.value)}
+          placeholder="Type the repository name"
         />
-        <div>
-          <strong>rocketseat/unform</strong>
-          <p>
-            Easy peasy highly scalable ReactJS & React Native forms! rocket!
-          </p>
-        </div>
+        <button type="submit">Search</button>
+      </Form>
 
-        <FiChevronRight size={20} />
-      </a>
-    </Repositories>
-    <Repositories>
-      <a href="teste">
-        <img
-          src="https://avatars3.githubusercontent.com/u/1704461?s=460&v=4"
-          alt="Daniel Backes"
-        />
-        <div>
-          <strong>rocketseat/unform</strong>
-          <p>
-            Easy peasy highly scalable ReactJS & React Native forms! rocket!
-          </p>
-        </div>
+      {inputError && <Error>{inputError}</Error>}
 
-        <FiChevronRight size={20} />
-      </a>
-    </Repositories>
-    <Repositories>
-      <a href="teste">
-        <img
-          src="https://avatars3.githubusercontent.com/u/1704461?s=460&v=4"
-          alt="Daniel Backes"
-        />
-        <div>
-          <strong>rocketseat/unform</strong>
-          <p>
-            Easy peasy highly scalable ReactJS & React Native forms! rocket!
-          </p>
-        </div>
-
-        <FiChevronRight size={20} />
-      </a>
-    </Repositories>
-  </>
-);
+      <Repositories>
+        {repositories.map(repository => (
+          <Link
+            key={repository.full_name}
+            to={`/repository/${repository.full_name}`}
+          >
+            <img
+              src={repository.owner.avatar_url}
+              alt={repository.owner.login}
+            />
+            <div>
+              <strong>{repository.full_name}</strong>
+              <p>{repository.description}</p>
+            </div>
+            <FiChevronRight size={20} />
+          </Link>
+        ))}
+      </Repositories>
+    </>
+  );
+};
 
 export default Dashboard;
