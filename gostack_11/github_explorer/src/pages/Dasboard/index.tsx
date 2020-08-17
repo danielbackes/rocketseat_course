@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import logoImg from '../../assets/logo.png';
 
-import { Title, LogoText, Form, Repositories, Error } from './styles';
+import { Title, Header, Form, Repositories, Error } from './styles';
 
 interface Repository {
   full_name: string;
@@ -64,11 +64,16 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <img src={logoImg} alt="Github Explorer" width="40" />
-      <LogoText>
-        <span>github</span>
-        _explorer
-      </LogoText>
+      <Header>
+        <div>
+          <img src={logoImg} alt="Github Explorer" width="40" />
+          <span>
+            <strong>github_</strong>
+            explorer
+          </span>
+        </div>
+      </Header>
+
       <Title>Explore repositories on Github.</Title>
 
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>

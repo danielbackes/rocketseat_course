@@ -5,14 +5,29 @@ interface FormProps {
   hasError: boolean;
 }
 
-export const LogoText = styled.span`
-  font-size: 20px;
-  color: #3a3a3a;
-  margin-left: 10px;
-  opacity: 0.7;
+export const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  span {
-    font-weight: bold;
+  div {
+    display: flex;
+    align-items: center;
+
+    img {
+      opacity: 0.5;
+    }
+
+    span {
+      font-size: 20px;
+      color: #3a3a3a;
+      margin-left: 10px;
+      opacity: 0.7;
+
+      strong {
+        font-weight: bold;
+      }
+    }
   }
 `;
 
